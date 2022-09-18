@@ -13,6 +13,7 @@ public class GeneratorImpl implements Generator {
     private static final int MIN_FLOORS_COUNT = 5;
     private static final int MAX_FLOORS_COUNT = 20;
     private static final int MAX_PASSENGERS_COUNT = 10;
+
     @Override
     public Building generateBuilding() {
         int randomNumberFloorsInBuilding = generateRandomNumberBetween(MIN_FLOORS_COUNT, MAX_FLOORS_COUNT);
@@ -29,8 +30,8 @@ public class GeneratorImpl implements Generator {
         int randomNumberOfPassengersInFloor = generateRandomNumberBetweenWithZero(MAX_PASSENGERS_COUNT);
         for (int i = 0; i < randomNumberOfPassengersInFloor; i++) {
             int targetFloor = generateTargetFloorForPassenger(maxFloorsInBuilding, currentFloorNumber);
-           Passenger passenger = new Passenger(targetFloor);
-           floor.getPassengersOnFloor().add(passenger);
+            Passenger passenger = new Passenger(targetFloor);
+            floor.getPassengersOnFloor().add(passenger);
         }
         return floor;
     }

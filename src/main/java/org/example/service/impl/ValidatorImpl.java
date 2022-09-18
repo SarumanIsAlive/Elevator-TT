@@ -5,6 +5,7 @@ import org.example.model.Elevator;
 import org.example.model.Floor;
 import org.example.model.Passenger;
 import org.example.service.Validator;
+
 public class ValidatorImpl implements Validator {
     @Override
     public void validateDirection(Building building) {
